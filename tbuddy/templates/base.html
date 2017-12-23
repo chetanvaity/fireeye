@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Travel Buddy{% endblock %}</title>
+</head>
+
+<body>
+    <div>You are: {{ request.user }} </div>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

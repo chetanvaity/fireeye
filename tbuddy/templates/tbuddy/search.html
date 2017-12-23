@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Search Travel{% endblock %}
+
+{% block content %}
+
+  <h2>Search Travel</h2>
+  <form method="post" action="{% url 'tbuddy:searchTravel' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Search</button>
+  </form>
+
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Travel List{% endblock %}
+
+{% block content %}
+
+<a href="/tbuddy/travel/search">Search Travels</a>
+
+{% if travel_list %}
+    <ul>
+    {% for travel in travel_list %}
+        <li><a href="/tbuddy/travel/{{ travel.id }}/">{{ travel }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No travels</p>
+{% endif %}
+{% endblock %}
